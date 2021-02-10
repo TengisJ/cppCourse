@@ -4,16 +4,24 @@ using namespace std;
 
 int main(){
 	
-	int input, power;
+	int input, i, j;
 	
-	cout << "Enter a number: ";
+	cout << "enter a number: ";
 	
-	cin >> input >> power;
+	cin >> input;
 	
-	for(int i = 1; i < power; i++){
+	for(i = 1; i <= input; i++){
 		
-		input *= input;
+		for(j = 1; j < 0 + i; j++){
+			
+			cout << " ";
+		}
+		for(j = 1; j <= input; j++){
+			
+			cout << "*";
+		}
+		cout << endl;
 	}
-	cout << "Power of the number is " << input;
+	
 	return 0;
 }

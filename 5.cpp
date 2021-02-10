@@ -4,25 +4,26 @@ using namespace std;
 
 int main(){
 	
-	int x, y, z;
+	int input, i, j;
 	
-	cout << "Enter numbers: ";
+	cout << "Enter a number: ";
 	
-	cin >> x >> y;
+	cin >> input;
 	
-	if(x > y){
-		z = x;
-	}
-	else{
-		z = y;
-	}
-	
-	for(int i = z; i >= 0; i--){
+	for(i = 1; i <= input; i++){
 		
-		if(x % i == 0 && y % i == 0){
-			cout << "HCF is " << i;
-			break;
+		for(j = 1; j <= i; j++){
+			
+			if(i == 1 || i == 2 || i == input || i == j || j == 1){
+				
+				cout << "*";
+			}
+			else{
+				
+				cout << " ";
+			}
 		}
+		cout << endl;
 	}
 	
 	return 0;

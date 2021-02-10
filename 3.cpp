@@ -4,18 +4,31 @@ using namespace std;
 
 int main(){
 	
-	int input;
+	int input, i, j;
 	
 	cout << "Enter a number: ";
 	
 	cin >> input;
 	
-	cout << "Factors of " << input << endl;
-	for(int i = 1; i <= input; i++){
+	for(i = 1; i <= input; i++){
 		
-		if(input % i == 0){
-			cout << i << endl;
+		for(j = 1; j < 0 + i; j++){
+			
+			cout << " ";
 		}
+		
+		for(j = 1; j <= input; j++){
+			
+			if(i == 1 || j == 1 || j == input || i == input){
+				
+				cout << "*";
+			}
+			else{
+				
+				cout << " ";
+			}
+		}
+		cout << endl;
 	}
 	
 	return 0;

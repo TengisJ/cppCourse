@@ -4,17 +4,20 @@ using namespace std;
 
 int main(){
 	
-	int input, temp;
+	int input, i, j;
 	
 	cout << "Enter a number: ";
 	
 	cin >> input;
 	
-	for(int i = input - 1; i > 0; i--){
+	for(i = 1; i <= input; i++){
 		
-		input = input  * i;
+		for(j = 1; j <= 0 + i; j++){
+			
+			cout << "*";
+		}
+		cout << endl;
 	}
 	
-	cout << input;
 	return 0;
 }
