@@ -1,29 +1,36 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main(){
 	
-	int x, y, z;
+	int s, countEven = 0, countOdd = 0;
 	
-	cout << "Enter numbers: ";
+	cout << "Enter the size: ";
 	
-	cin >> x >> y;
+	cin >> s;
 	
-	if(x > y){
-		z = x;
-	}
-	else{
-		z = y;
-	}
+	int x[s];
 	
-	for(int i = z; i >= 0; i--){
+	cout << "Enter elements: ";
+	
+	for(int i = 0; i < s; i++){
 		
-		if(x % i == 0 && y % i == 0){
-			cout << "HCF is " << i;
-			break;
+		cin >> x[i];
+	}
+	for(int i = 0; i < s; i++){
+		
+		if(x[i] % 2 == 0){
+			
+			countEven++;
+		}
+		else if(x[i] % 2 != 0){
+			
+			countOdd++;
 		}
 	}
+	cout << "Even: " << countEven << "\nOdd: " << countOdd;
+	
 	
 	return 0;
 }

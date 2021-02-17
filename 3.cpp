@@ -1,22 +1,26 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main(){
 	
-	int input;
+	int s, total = 0;
 	
-	cout << "Enter a number: ";
+	cout << "Enter the size: ";
 	
-	cin >> input;
+	cin >> s;
 	
-	cout << "Factors of " << input << endl;
-	for(int i = 1; i <= input; i++){
+	int x[s];
+	
+	cout << "Enter elements: ";
+	
+	for(int i = 0; i < s; i++){
 		
-		if(input % i == 0){
-			cout << i << endl;
-		}
+		cin >> x[i];
+		total = total + x[i];
 	}
+	cout << total;
+	
 	
 	return 0;
 }

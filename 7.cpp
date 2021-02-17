@@ -1,24 +1,41 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main(){
 	
-	int input, x;
+	int s;
 	
-	cout << "Enter a number: ";
+	cout << "Enter the size: ";
 	
-	cin >> input;
+	cin >> s;
 	
-	for(int i = 2; i < input; i++){
+	int array1[s], array2[s];
+	
+	cout << "Enter elements: ";
+	
+	for(int i = 0; i < s; i++){
 		
-		if(input % i == 0){
-			cout << "Number is Not Prime. ";
-			break;
-		}
-		else{
-			cout << "Number is Prime. ";
-		}
+		cin >> array1[i];
+		
+	}
+	
+	cout << "Array1: ";
+	
+	for(int i = 0; i < s; i++){
+		
+		
+		
+		cout << array1[i] << " ";
+	}
+	
+	cout << "\nArray2: ";
+	for(int i = 0; i < s; i++){
+	
+		array2[i] = array1[i];
+		
+		cout << array2[i] << " ";
+	
 	}
 	
 	return 0;

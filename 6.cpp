@@ -1,29 +1,33 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main(){
 	
-	int x, y, z;
+	int s, count = 0;
 	
-	cout << "Enter numbers: ";
+	cout << "Enter the size: ";
 	
-	cin >> x >> y;
+	cin >> s;
 	
-	if(x > y){
-		z = x;
-	}
-	else{
-		z = y;
-	}
+	int x[s];
 	
-	for(int i = z + 1; i >= 0; i++){
+	cout << "Enter elements: ";
+	
+	for(int i = 0; i < s; i++){
 		
-		if(i % x == 0 && i % y == 0){
-			cout << "LCM is " << i;
-			break;
+		cin >> x[i];
+	}
+	for(int i = 0; i < s; i++){
+		
+		if(x[i] < 0){
+			
+			count++;
 		}
 	}
+	
+	cout << "Amount of Negative numbers: " << count;
+	
 	
 	return 0;
 }

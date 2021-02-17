@@ -1,19 +1,30 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main(){
 	
-	int input, power;
+	int s;
 	
-	cout << "Enter a number: ";
+	cout << "Enter the size: ";
 	
-	cin >> input >> power;
+	cin >> s;
 	
-	for(int i = 1; i < power; i++){
+	int x[s];
+	
+	cout << "Enter elements: ";
+	
+	for(int i = 0; i < s; i++){
 		
-		input *= input;
+		cin >> x[i];
 	}
-	cout << "Power of the number is " << input;
+	for(int i = 0; i < s; i++){
+		if(x[i] < 0){
+		
+			cout << x[i] << " ";
+		}
+	}
+	
+	
 	return 0;
 }

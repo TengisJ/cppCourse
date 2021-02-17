@@ -1,28 +1,35 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main(){
 	
-	int input, i, z, j, k;
+	int s, i;
 	
-	cout << "Enter a number: ";
+	cout << "How much you wanna order: ";
 	
-	cin >> input;
+	cin >> s;
 	
-	for(i = 1; i < input; i++){
+	cout << "What do you wanna order: " << endl;
+	
+	string menu[s];
+	
+	cin.ignore();
+	
+	for(i = 0; i < s; i++){
 		
-		k = 0;
-		
-		for(j = 2; j < i; j++){
-			if(i % j == 0){
-				k++;
-			}
-		}
-		if(k == 0){
-			cout << i << " ";
-		}	
+		cout << i + 1 << ". ";
+		getline(cin, menu[i]);
 	}
+	
+	
+	cout << "What you have ordered: " << endl;
+	
+	for(i = 0; i < s; i++){
+		
+		cout << menu[i] << " ";
+	}
+	
 	
 	return 0;
 }

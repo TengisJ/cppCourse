@@ -1,20 +1,46 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main(){
 	
-	int input, temp;
+	int s, max, min;
 	
-	cout << "Enter a number: ";
+	cout << "Enter the size: ";
 	
-	cin >> input;
+	cin >> s;
 	
-	for(int i = input - 1; i > 0; i--){
+	int x[s];
+	
+	cout << "Enter elements: ";
+	
+	
+	for(int i = 0; i < s; i++){
 		
-		input = input  * i;
+		cin >> x[i];
+	
 	}
 	
-	cout << input;
+	max = x[0];
+	
+	min = x[0];
+	
+	for(int i = 1; i < s; i++){
+	
+		if(x[i] > max){
+			
+			max = x[i];
+		}
+		
+		if(x[i] < min){
+			
+			min = x[i];
+		}
+
+	}
+	
+	cout << "Max: " << max << "\nMin: " << min;
+	
+	
 	return 0;
 }
