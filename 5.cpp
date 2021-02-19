@@ -4,33 +4,25 @@ using namespace std;
 
 int main(){
 	
-	int s, countEven = 0, countOdd = 0;
+	int input, s, i;
 	
-	cout << "Enter the size: ";
+	cout<<"Input size of array: ";
+	cin>>s;
 	
-	cin >> s;
+	int arr[s];
 	
-	int x[s];
-	
-	cout << "Enter elements: ";
-	
-	for(int i = 0; i < s; i++){
-		
-		cin >> x[i];
+	cout<<"Enter elements: ";
+	for(i = 0; i < s; i++){
+		cin>>arr[i];
 	}
-	for(int i = 0; i < s; i++){
-		
-		if(x[i] % 2 == 0){
-			
-			countEven++;
-		}
-		else if(x[i] % 2 != 0){
-			
-			countOdd++;
+	cout<<"Element to search: ";
+	cin>>input;
+	
+	for(i = 0; i < s; i++){
+		if(arr[i] == input){
+			break;
 		}
 	}
-	cout << "Even: " << countEven << "\nOdd: " << countOdd;
-	
-	
+		cout<<"Element was found in: "<< i + 1;
 	return 0;
 }

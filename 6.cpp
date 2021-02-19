@@ -4,30 +4,28 @@ using namespace std;
 
 int main(){
 	
-	int s, count = 0;
+	int input, s;
 	
-	cout << "Enter the size: ";
+	cout<<"Input size of array: ";
+	cin>>s;
 	
-	cin >> s;
+	int arr[s];
 	
-	int x[s];
-	
-	cout << "Enter elements: ";
-	
+	cout<<"Enter elements: ";
 	for(int i = 0; i < s; i++){
-		
-		cin >> x[i];
+		cin>>arr[i];
 	}
+	
 	for(int i = 0; i < s; i++){
-		
-		if(x[i] < 0){
-			
-			count++;
+		for(int j = i + 1; j < s; j++){
+			if(arr[i]> arr[j]){
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
 		}
 	}
-	
-	cout << "Amount of Negative numbers: " << count;
-	
-	
-	return 0;
+	for(int i = 0; i < s; i++){
+		cout<<arr[i]<<" ";
+	}
 }

@@ -4,23 +4,19 @@ using namespace std;
 
 int main(){
 	
-	int s, total = 0;
+	int arr[6] = {10, 5, 16, 35, 500, 600}, s = sizeof(arr)/sizeof(arr[0]), i;
 	
-	cout << "Enter the size: ";
-	
-	cin >> s;
-	
-	int x[s];
-	
-	cout << "Enter elements: ";
-	
-	for(int i = 0; i < s; i++){
-		
-		cin >> x[i];
-		total = total + x[i];
+	for(i = 0; i < s; i++){
+		if(i >= s / 2){
+			break;
+		}
+		int temp = arr[i];
+		arr[i] = arr[(s - 1) - i];
+		arr[(s - 1) - i] = temp;
 	}
-	cout << total;
-	
+	for(int i = 0; i < s; i++){
+		cout<<arr[i]<<" ";
+	}
 	
 	return 0;
 }
